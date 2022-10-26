@@ -1,0 +1,405 @@
+/*
+  ===================
+    Table Of Contents
+  ===================
+      -  Google Fonts
+      1. Reset (minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css)
+      2. Custom Properties And Utility
+      3. Global Styles
+      4. Typography
+      5. Layout
+      6. Components
+        6.1 Buttons
+      7. Media Queries
+*/
+
+/*
+  =================
+    - Google Fonts
+  =================
+        font-family: 'Manrope', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+/*
+  ==========
+    1. Reset
+  ==========
+*/
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+
+ul {
+  list-style: none
+}
+
+button,
+input,
+select {
+  margin: 0
+}
+
+html {
+  box-sizing: border-box
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%
+}
+
+iframe {
+  border: 0
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+td,
+th {
+  padding: 0
+}
+
+/*
+  ==================================
+    2. Custom Properties And Utility
+  ==================================
+*/
+
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+.offscreen {
+  position: absolute;
+  top: -999999;
+  left: -999999;
+}
+
+/*
+  ==================
+    3. Global Styles
+  ==================
+*/
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--light-grayish-blue);
+}
+
+/*
+  ===============
+    4. Typography
+  ===============
+*/
+
+.card-content .card-content-header {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+  margin-bottom: 0.938rem;
+}
+
+.card-content p {
+  font-size: 0.856rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--desaturated-dark-blue);
+}
+
+.card-footer-detail h2 {
+  font-size: 0.813rem;
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+}
+
+.card-footer-detail p {
+  font-size: 0.813rem;
+  font-weight: 500;
+  color: var(--desaturated-dark-blue);
+}
+
+.card-footer-share p {
+  font-size: 0.813rem;
+  font-weight: 500;
+  color: var(--light-grayish-blue);
+  letter-spacing: 0.188rem;
+}
+
+/*
+  ===========
+    5. Layout
+  ===========
+*/
+
+main {
+  display: grid;
+  grid-template-columns: 20.563rem;
+  grid-template-rows: 12.688rem 15.125rem 4.125rem;
+  background-color: hsl(213, 44%, 100%);
+  border-radius: 0.625rem;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.card-header-img {
+  background-image: url('./assets/drawers.jpg');
+  background-size: cover;
+  background-position: 0 -0.938rem;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+
+.card-content {
+  padding: 1.875rem;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  position: relative;
+  padding: 1.25rem;
+}
+
+.card-footer-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.188rem;
+}
+
+.card-footer-share {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--very-dark-grayish-blue);
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+  padding: 1.25rem;
+  padding-left: 2.125rem;
+  gap: 1.125rem;
+  position: relative;
+}
+
+.avatar,
+.user-image {
+  max-width: 2.625rem;
+  max-height: 2.625rem;
+  border-radius: 50%;
+}
+
+.share {
+  min-width: 2.125rem;
+  min-height: 2.125rem;
+  background-color: var(--light-grayish-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1.25rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.share-open {
+  background-color: hsl(214, 17%, 51%);
+}
+
+.share-img-open {
+  filter: invert(51%) sepia(8%) saturate(1134%) hue-rotate(175deg) brightness(96%) contrast(89%);
+}
+
+/*
+  ===============
+    6. Components
+  ===============
+      6.1 Footer
+*/
+
+.footer {
+  display: block;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  border-radius: 0.813rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: 0.5s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: 1s ease-in-out all;
+  animation: footer-animation 2s;
+  animation-iteration-count: infinite;
+}
+
+.footer p a {
+  color: #3C4048;
+  transition: 0.2s ease;
+  font-weight: 700;
+}
+
+.footer a:focus {
+  outline: none;
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: #F96666;
+  text-decoration-color: transparent;
+}
+
+@keyframes footer-animation {
+
+  0%,
+  100% {
+    bottom: 0.5rem;
+  }
+
+  50% {
+    bottom: 2rem;
+  }
+}
+
+/*
+  ==================
+    7. Media Queries
+  ==================
+*/
+
+@media screen and (min-width:36em) {
+  main {
+    display: grid;
+    grid-template-columns: 17.938rem 27.875rem;
+    grid-template-rows: 17.625rem;
+  }
+
+  .card-content .card-content-header {
+    font-size: 1.2rem;
+  }
+
+  .card-header-img {
+    background-size: cover;
+    background-position: 0 0;
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+    border-top-right-radius: 0;
+  }
+
+  .card-content {
+    padding: 2.625rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-content .card-footer-detail {
+    margin-left: 0.938rem;
+  }
+
+  .card-footer-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1.25rem;
+    position: relative;
+  }
+
+  .share {
+    right: -0.938rem;
+  }
+
+  .share-box {
+    width: 15.625rem;
+    height: 3.563rem;
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    top: -5.438rem;
+    right: -7.813rem;
+    border-radius: 0.625rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding: 1.25rem 2.5rem;
+  }
+
+  .share-box p {
+    font-size: 0.813rem;
+    font-weight: 500;
+    color: var(--light-grayish-blue);
+    letter-spacing: 0.188rem;
+  }
+
+  .share-box .facebook {
+    margin-left: 0.625rem;
+  }
+
+  .share-box:before {
+    content: "";
+    position: absolute;
+    bottom: -0.625rem;
+    margin-top: -0.625rem;
+    left: 7.188rem;
+    border: solid 0.625rem transparent;
+    transform: rotate(45deg);
+    background-color: hsl(217, 19%, 35%);
+    z-index: 3;
+  }
+}
