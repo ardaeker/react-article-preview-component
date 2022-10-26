@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/article-preview-component-with-react-framer-motion-n5Y9-dHMGj)
+- Live Site URL: [Live site URL here](https://ardaekerfrontendmentor-11.netlify.app/)
 
 ## My process
 
