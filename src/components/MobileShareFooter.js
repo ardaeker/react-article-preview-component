@@ -8,9 +8,15 @@ const MobileShareFooter = ({ setIsOpen }) => {
   return (
     <>
       <p>SHARE</p>
-      <img src={Facebook} alt="facebook" />
-      <img src={Twitter} alt="Twitter" />
-      <img src={Pinterest} alt="Pinterest" />
+      <a href="https://www.facebook.com/">
+        <img src={Facebook} alt="facebook" />
+      </a>
+      <a href="https://www.twitter.com/">
+        <img src={Twitter} alt="Twitter" />
+      </a>
+      <a href="https://www.pinterest.com/">
+        <img src={Pinterest} alt="Pinterest" />
+      </a>
       <div className="share  share-open" onClick={() => setIsOpen(false)}>
         <img src={Share} alt="Share" />
       </div>

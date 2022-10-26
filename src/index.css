@@ -103,6 +103,15 @@ th {
   padding: 0
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
 /*
   ==================================
     2. Custom Properties And Utility
@@ -264,6 +273,11 @@ main {
   filter: invert(51%) sepia(8%) saturate(1134%) hue-rotate(175deg) brightness(96%) contrast(89%);
 }
 
+a {
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+}
+
 /*
   ===============
     6. Components
@@ -375,8 +389,8 @@ main {
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 1.25rem;
+    justify-content: space-between;
+
     padding: 1.25rem 2.5rem;
   }
 

@@ -32,9 +32,15 @@ const DesktopFooterComponent = ({ isOpenDesktop, setIsOpenDesktop }) => {
           }}
         >
           <p>SHARE</p>
-          <img className="facebook" src={Facebook} alt="facebook" />
-          <img src={Twitter} alt="Twitter" />
-          <img src={Pinterest} alt="Pinterest" />
+          <a href="https://www.facebook.com/">
+            <img className="facebook" src={Facebook} alt="facebook" />
+          </a>
+          <a href="https://www.twitter.com/">
+            <img src={Twitter} alt="Twitter" />
+          </a>
+          <a href="https://www.pinterest.com/">
+            <img src={Pinterest} alt="Pinterest" />
+          </a>
         </motion.div>
       ) : null}
 
